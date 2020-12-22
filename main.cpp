@@ -11,6 +11,7 @@ int main(int /*argc*/, char* /*argv*/[]) {
     test2.setSeparator(';');
     test2.load("test1.csv");
     test2.print();
+    std::cout << test2.shape().second << std::endl;
     std::cout << test2[2][2].toDouble() << std::endl;
     std::cout << test2[0][3].toString() << std::endl;
     return 0;

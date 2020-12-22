@@ -60,6 +60,8 @@ public:
     void setSeparator(char separator_);
     CsvRow& operator[](size_t i_);
     void print() const;
+    size_t size() const;
+    std::pair<size_t, size_t> shape() const;
 private:
     std::vector<CsvRow> m_rows;
     char m_separator{','};

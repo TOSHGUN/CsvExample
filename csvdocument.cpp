@@ -184,3 +184,15 @@ void CsvDocument::print() const {
         std::cout << std::endl;
     }
 }
+
+size_t CsvDocument::size() const {
+    return m_rows.size();
+}
+
+std::pair<size_t, size_t> CsvDocument::shape() const {
+    size_t maxRowSize{0};
+    for (const auto& row : m_rows) {
+        maxRowSize = std::max(maxRowSize, row.size());
+    }
+    return {size(), maxRowSize};
+}
